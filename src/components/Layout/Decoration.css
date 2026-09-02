@@ -1,0 +1,296 @@
+
+.home-decoration {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home-decoration {
+    display: block;
+    min-height: 1024px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .home-decoration {
+    min-height: 850px;
+  }
+}
+
+.dec-spot {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .dec-spot {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 461px;
+    right: -32px;
+    width: 553px;
+    height: 750px;
+    background-image: url("../../img/spot-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dec-spot {
+    top: 34px;
+    right: 0;
+    width: 603px;
+    height: 816px;
+    background-image: url("../../img/spot.png");
+  }
+}
+
+.dec-strawberry {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .dec-strawberry {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 547px;
+    right: 68px;
+    width: 265px;
+    height: 273px;
+    background-image: url("../../img/strawberry@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dec-strawberry {
+    top: 458px;
+    right: 2px;
+    width: 362px;
+    height: 374px;
+  }
+}
+
+.dec-leaves {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .dec-leaves {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 215px;
+    top: 455px;
+    width: 531px;
+    height: 602px;
+    transform: rotate(90deg);
+    background-image: url("../../img/leaves@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dec-leaves {
+    top: 0;
+    right: 50px; 
+    width: 900px; 
+    height: 1000px;
+    transform: rotate(0);
+  }
+}
+
+.dec-banana {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .dec-banana {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 593px;
+    right: -249px;
+    width: 740px;
+    height: 527px;
+    background-image: url("../../img/banana@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dec-banana {
+    top: -102px;
+    right: -287px;
+    width: 773px;
+    height: 552px;
+  }
+}
+
+.dec-strawberry, .dec-leaves, .dec-banana,
+.login-dec-strawberry, .login-dec-leaves, .login-dec-banana {
+  animation: fruitEntry 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
+
+.dec-leaves, .login-dec-leaves { animation-delay: 0.2s; }
+.dec-strawberry, .login-dec-strawberry { animation-delay: 0.4s; }
+.dec-banana, .login-dec-banana { animation-delay: 0.6s; }
+
+@keyframes fruitEntry {
+  0% { transform: scale(0.8) translateY(40px) rotate(10deg); opacity: 0; }
+  100% { transform: scale(1) translateY(0) rotate(var(--orig-rot, 0deg)); opacity: 1; }
+}
+
+.dec-leaves { --orig-rot: 90deg; }
+@media screen and (min-width: 1280px) { .dec-leaves { --orig-rot: 0deg; } }
+
+.dec-spot, .login-dec-spot {
+  transition: filter 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+
+[data-theme='dark'] .dec-spot, 
+[data-theme='dark'] .login-dec-spot {
+  filter: brightness(0.2) contrast(1.1) saturate(0.5);
+  opacity: 0.6;
+}
+
+.login-decoration {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-decoration {
+    display: block;
+    min-height: 1024px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-decoration {
+    min-height: 850px;
+  }
+}
+
+.login-dec-spot {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-dec-spot {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 461px;
+    right: -32px;
+    width: 553px;
+    height: 750px;
+    background-image: url("../../img/spot-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-dec-spot {
+    top: 0px;
+    right: 0px;
+    width: 715px;
+    height: 849px;
+    background-image: url("../../img/spot-login.png");
+  }
+}
+
+.login-dec-strawberry {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-dec-strawberry {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 412px;
+    right: -66px;
+    width: 370px;
+    height: 382px;
+    background-image: url("../../img/strawberry@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-dec-strawberry {
+    top: 165px;
+    right: 27px;
+    width: 362px;
+    height: 374px;
+  }
+}
+
+.login-dec-leaves {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-dec-leaves {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: -97px;
+    right: 12px;
+    width: 740px;
+    height: 842px;
+    background-image: url("../../img/leaves-login-tablet@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-dec-leaves {
+    top: -26px;
+    right: 250px;
+    width: 746px;
+    height: 846px;
+    background-image: url("../../img/leaves-login@1x.png");
+  }
+}
+
+.login-dec-banana {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-dec-banana {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 593px;
+    right: -249px;
+    width: 740px;
+    height: 527px;
+    background-image: url("../../img/banana@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .login-dec-banana {
+    top: 366px;
+    right: -204px;
+    width: 773px;
+    height: 552px;
+  }
+}

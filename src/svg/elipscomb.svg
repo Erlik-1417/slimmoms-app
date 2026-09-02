@@ -1,0 +1,17 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-elips-gray" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color1, #fff); stroke: var(--color2, #e0e0e0)" stroke="#e0e0e0" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M30.545 16c0 8.033-6.512 14.545-14.545 14.545s-14.545-6.512-14.545-14.545c0-8.033 6.512-14.545 14.545-14.545s14.545 6.512 14.545 14.545z"></path>
+</symbol>
+<symbol id="icon-elips-orange" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color1, #fff); stroke: var(--color2, #fc842d)" stroke="#fc842d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M30.545 16c0 8.033-6.512 14.545-14.545 14.545s-14.545-6.512-14.545-14.545c0-8.033 6.512-14.545 14.545-14.545s14.545 6.512 14.545 14.545z"></path>
+</symbol>
+<symbol id="icon-elips-combine" viewBox="0 0 32 32">
+<path fill="#e5e5e5" style="fill: var(--color3, #e5e5e5)" d="M0 0h32v32h-32v-32z"></path>
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M-558.545-805.818h1861.818v1236.364h-1861.818v-1236.364z"></path>
+<path fill="#fff" style="fill: var(--color4, #fff)" d="M-65.455-843.636h1085.091v1230.545h-1085.091v-1230.545z"></path>
+<path fill="#fff" style="fill: var(--color1, #fff); stroke: var(--color2, #e0e0e0)" stroke="#e0e0e0" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M30.545 16c0 8.033-6.512 14.545-14.545 14.545s-14.545-6.512-14.545-14.545c0-8.033 6.512-14.545 14.545-14.545s14.545 6.512 14.545 14.545z"></path>
+<path fill="#fc842d" style="fill: var(--color5, #fc842d)" d="M23.273 16c0 4.017-3.256 7.273-7.273 7.273s-7.273-3.256-7.273-7.273c0-4.017 3.256-7.273 7.273-7.273s7.273 3.256 7.273 7.273z"></path>
+</symbol>
+</defs>
+</svg>

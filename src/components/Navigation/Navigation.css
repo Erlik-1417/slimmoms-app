@@ -1,0 +1,10 @@
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1279px) {
+  .main-nav {
+    display: none; 
+  }
+}

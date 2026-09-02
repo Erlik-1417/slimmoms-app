@@ -1,0 +1,21 @@
+
+.main-page-content {
+  margin-left: 0;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-page-content {
+    margin: 0;
+    padding-left: 32px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-page-content {
+    margin: 0;
+    padding-left: 115px;
+    padding-top: 145px;
+  }
+}

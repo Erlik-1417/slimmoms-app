@@ -1,0 +1,34 @@
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-bold);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--main-grey);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.lang-btn:hover {
+  color: var(--main-orange);
+}
+
+.lang-btn--active {
+  color: var(--main-orange);
+  font-weight: bold;
+}
+
+.lang-divider {
+  color: var(--main-grey);
+  font-size: 12px;
+  user-select: none;
+}

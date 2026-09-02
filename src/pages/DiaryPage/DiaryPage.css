@@ -1,0 +1,56 @@
+
+.diary-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+@media (min-width: 1280px) {
+  .diary-page-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
+
+.diary-left-col {
+  flex: 1;
+  padding: 40px 20px 80px;
+}
+
+@media (min-width: 768px) {
+  .diary-left-col {
+    padding: 80px 32px 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .diary-left-col {
+    padding: 40px 32px 80px 100px; 
+    max-width: none;
+    flex: 1.4;
+  }
+}
+
+.diary-right-col {
+  background-color: #F0F1F3; 
+  width: 100%;
+}
+
+[data-theme='dark'] .diary-right-col {
+  background-color: var(--bg-grey); 
+}
+
+@media (min-width: 1280px) {
+  .diary-right-col {
+    width: 400px;
+    min-width: 400px;
+    padding: 0; 
+    align-self: flex-start;
+    background-color: transparent;
+  }
+  [data-theme='dark'] .diary-right-col {
+    background-color: transparent;
+  }
+}
