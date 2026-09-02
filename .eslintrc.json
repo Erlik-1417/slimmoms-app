@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "overrides": [
+    {
+      "files": ["backend/**/*.js"],
+      "env": {
+        "node": true,
+        "commonjs": true
+      },
+      "extends": ["eslint:recommended"],
+      "rules": {
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+      }
+    },
+    {
+      "files": ["frontend/src/**/*.{js,jsx}"],
+      "env": {
+        "browser": true
+      },
+      "extends": ["react-app"],
+      "rules": {
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+      }
+    }
+  ]
+}

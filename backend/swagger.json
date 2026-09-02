@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SlimMoms API",
+    "version": "1.0.0",
+    "description": "API documentation for the SlimMoms project",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Local development server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "paths": {
+    "/api/users/register": {
+      "post": {
+        "summary": "Register a new user",
+        "operationId": "registerUser",
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Created" },
+          "400": { "description": "Validation error" }
+        }
+      }
+    },
+    "/api/users/login": {
+      "post": {
+        "summary": "Login user",
+        "operationId": "loginUser",
+        "security": [],
+         "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { 
+          "200": { "description": "Success - returns accessToken and refreshToken" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/users/refresh": {
+      "post": {
+        "summary": "Refresh token pair",
+        "operationId": "refreshToken",
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "refreshToken": { "type": "string" },
+                  "sessionId": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { 
+          "200": { "description": "Success - returns new tokens" },
+          "401": { "description": "Invalid token" }
+        }
+      }
+    },
+    "/api/users/logout": {
+      "post": {
+        "summary": "Logout user",
+        "operationId": "logoutUser",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { 
+          "204": { "description": "No Content" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/calculator/public": {
+      "post": {
+        "summary": "Calculate daily calories publicly",
+        "operationId": "calcPublic",
+        "security": [],
+        "responses": { 
+          "200": { "description": "Success" },
+          "400": { "description": "Bad request" }
+        }
+      }
+    },
+    "/api/calculator/private": {
+      "post": {
+        "summary": "Calculate daily calories and save to user",
+        "operationId": "calcPrivate",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { 
+          "200": { "description": "Success" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "summary": "Search products by query",
+        "operationId": "searchProducts",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          { "name": "search", "in": "query", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { 
+          "200": { "description": "Success" },
+          "400": { "description": "Bad request" }
+        }
+      }
+    },
+    "/api/diary/day": {
+      "post": {
+        "summary": "Add consumed product for a specific day",
+        "operationId": "addDiaryDay",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { 
+          "201": { "description": "Added" },
+          "404": { "description": "Not found" }
+        }
+      }
+    },
+    "/api/diary/day/{productId}": {
+      "delete": {
+        "summary": "Delete consumed product for a day",
+        "operationId": "deleteDiaryDay",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          { "name": "productId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { 
+          "200": { "description": "Success" },
+          "404": { "description": "Not found" }
+        }
+      }
+    },
+    "/api/diary/day/info": {
+      "post": {
+        "summary": "Get all info for a specific day",
+        "operationId": "infoDiaryDay",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { 
+          "200": { "description": "Success" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    }
+  }
+}
