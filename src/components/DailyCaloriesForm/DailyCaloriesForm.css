@@ -1,0 +1,175 @@
+
+.calc-form-wrap {
+  width: 100%;
+  max-width: 605px;
+  padding: 40px 20px;
+}
+
+@media (min-width: 768px) {
+  .calc-form-wrap {
+    padding: 0;
+    margin-bottom: 28px;
+  }
+}
+
+.calc-form-title {
+  font-family: var(--font-bold), Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .calc-form-title {
+    font-size: 34px;
+    margin-bottom: 60px;
+  }
+}
+
+.calc-inner-div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .calc-inner-div {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.calc-col-left,
+.calc-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .calc-col-left,
+  .calc-col-right {
+    width: 240px;
+    min-width: 240px;
+  }
+}
+
+.calc-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.calc-label {
+  display: block;
+  font-family: var(--font-bold), Verdana, sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.calc-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 0;
+  outline: none;
+  background-color: transparent;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.calc-input:-webkit-autofill,
+.calc-input:-webkit-autofill:hover,
+.calc-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+  box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+.calc-blood-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.calc-blood-wrap .calc-label {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.calc-radio-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.calc-radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.calc-radio-input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--main-orange);
+  cursor: pointer;
+}
+
+.calc-radio-span {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.calc-radio-span.checked {
+  color: var(--main-orange);
+  font-weight: 700;
+}
+
+.calc-btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 3rem; 
+}
+
+@media (min-width: 768px) {
+  .calc-btn-wrap {
+    justify-content: flex-start; 
+    padding-left: 0;
+  }
+}
+
+.calc-submit-btn {
+  background-color: var(--main-orange);
+  color: #fff;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.4);
+  min-width: 176px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-submit-btn:hover:not(:disabled) {
+  background-color: #ff9b50;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(252, 132, 45, 0.6);
+}
+
+.calc-error, .calc-error-blood {
+  font-size: 10px;
+  color: #e11a28;
+  margin-top: 4px;
+}

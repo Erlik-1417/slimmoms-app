@@ -1,0 +1,68 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon-svg {
+  width: 47px;
+  height: 44px;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+[data-theme='dark'] .logo-icon-svg {
+  
+  filter: invert(1) hue-rotate(180deg) brightness(1.2);
+}
+
+.logo-text {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: none; 
+}
+
+@media screen and (min-width: 768px) {
+  .logo-text {
+    display: flex;
+    gap: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo-icon-svg {
+    width: 71px;
+    height: 66px;
+  }
+  .logo-text {
+    font-size: 32px;
+  }
+}
+
+.logo-slim {
+  color: var(--text-primary);
+  transition: color 0.4s ease;
+}
+
+.logo-mom {
+  color: var(--main-orange);
+}
+
+[data-theme='dark'] .logo-slim {
+  color: #ffffff !important;
+}

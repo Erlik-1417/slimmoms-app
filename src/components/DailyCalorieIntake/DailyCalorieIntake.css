@@ -1,0 +1,123 @@
+.dci-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.dci-title {
+  margin: 0 0 20px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-primary, #212121);
+  max-width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .dci-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}
+
+.dci-calories {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #264061;
+  text-align: center;
+}
+
+[data-theme='dark'] .dci-calories {
+  color: #529af1;
+}
+
+.dci-calories-unit {
+  font-size: 16px;
+  font-weight: 700;
+  color: #264061;
+  margin-left: 6px;
+}
+
+[data-theme='dark'] .dci-calories-unit {
+  color: #529af1;
+}
+
+.dci-line {
+  margin: 0 auto 12px; 
+  width: 100%;
+  max-width: 330px;
+  height: 1px;
+  background-color: #E0E0E0;
+}
+
+.dci-products-section {
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto 40px; 
+  text-align: left;
+}
+
+.dci-products-heading {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--text-primary, #212121);
+  letter-spacing: 0.04em;
+}
+
+.dci-products-list {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9B9FAA;
+}
+
+.dci-products-list li {
+  margin-bottom: 4px;
+}
+
+.dci-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.dci-button {
+  width: 210px;
+  height: 44px;
+  border: none !important;
+  border-radius: 30px;
+  background-color: #fc842d !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(252, 132, 45, 0.5);
+}
+
+.dci-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(252, 132, 45, 0.7);
+  background-color: #ff6b08 !important;
+}
+
+.dci-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

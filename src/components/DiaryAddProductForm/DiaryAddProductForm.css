@@ -1,0 +1,109 @@
+.add-product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: flex-end;
+}
+
+.add-product-form input {
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 10px 0;
+  outline: none;
+  font-size: 14px;
+  font-family: var(--font-main);
+  background: transparent;
+}
+
+.add-product-form input:focus {
+  border-bottom: 2px solid var(--main-orange);
+}
+
+.add-product-form input:-webkit-autofill,
+.add-product-form input:-webkit-autofill:hover,
+.add-product-form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+  box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  caret-color: var(--text-primary);
+}
+
+.product-input {
+  flex: 1;
+  max-width: 250px; 
+  min-width: 150px;
+}
+
+.weight-input {
+  width: 80px; 
+  text-align: right;
+}
+
+.add-btn {
+  background-color: #fc842d;
+  color: #ffffff !important;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  transition: all 0.2s ease;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  background-color: #ff9b50;
+  box-shadow: 0px 6px 15px rgba(252, 132, 45, 0.6);
+}
+
+.add-btn:active {
+  transform: scale(0.95);
+}
+.selected-product-hint {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 11px;
+  color: var(--main-orange);
+  margin-top: -12px;
+  pointer-events: none;
+  font-family: var(--font-main);
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .add-product-form {
+    gap: 12px;
+  }
+  .product-input {
+    max-width: none;
+    min-width: 130px;
+  }
+  .weight-input {
+    width: 65px;
+  }
+  .add-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .selected-product-hint {
+    position: static;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
